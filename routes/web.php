@@ -111,6 +111,8 @@ Route::group(['middleware' =>['auth:sanctum', 'verified']], function (){
         'uses' => '\App\Http\Controllers\admin\ProductController@addProduct',
         'as' => 'add-product'
     ]);
+
+    //    new product route
     Route::post('/new-product', [
         'uses' => '\App\Http\Controllers\admin\ProductController@newProduct',
         'as' => 'new-product'
